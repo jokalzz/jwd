@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Digital Solusi Indonesia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <div class="logo-left"></div>
+                    <div class="logo-right"></div>
+                    <i class="fas fa-code logo-icon"></i>
+                </div>
+                <div class="logo-text">Logo</div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <button class="nav-link active" onclick="showSection('home')">Home</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('profile')">Profile</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('visi')">Visi dan Misi</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('produk')">Produk Kami</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('kontak')">Kontak</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('about')">About Us</button>
+                </li>
+            </ul>
+
+            <!-- Articles Dropdown -->
+            <div style="padding: 0 20px; background: var(--light-bg);">
+                <div style="font-weight: bold; padding: 10px 0; border-bottom: 1px solid #ddd;">Artikel</div>
+                <div class="dropdown-menu-custom">
+                    <a href="#" class="dropdown-item-custom" onclick="showSection('artikel-konsep')">Konsep</a>
+                    <a href="#" class="dropdown-item-custom" onclick="showSection('artikel-teknologi')">Teknologi</a>
+                    <a href="#" class="dropdown-item-custom" onclick="showSection('artikel-informasi')">Informasi</a>
+                    <div style="padding: 5px 0; color: #999;">Dst..</div>
+                </div>
+            </div>
+
+            <!-- Additional Menu -->
+            <ul class="nav-menu" style="margin-top: 0;">
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('event')">Event</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('gallery')">Gallery</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" onclick="showSection('klien')">Foto Klien Kami</button>
+                </li>
+            </ul>
+
+            <!-- Login Section -->
+            <div class="login-section">
+                <div style="font-weight: bold; margin-bottom: 10px;">Login</div>
+                <a href="#" class="login-item" data-bs-toggle="modal" data-bs-target="#signinModal">Sign in</a>
+                <a href="#" class="login-item" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="company-name">PT Digital Solusi Indonesia</div>
+            </div>
+
+            <!-- Home Section -->
+            <div id="home" class="content-section active">
+                <div class="section-title">Selamat Datang</div>
+                <div class="info-card fade-in">
+                    <h3>PT Digital Solusi Indonesia</h3>
+                    <p>Kami adalah perusahaan teknologi yang menghadirkan inovasi digital untuk mengembangkan bisnis Anda ke level yang lebih tinggi. Dengan pengalaman lebih dari 6 tahun, kami telah melayani berbagai klien dari UMKM hingga perusahaan multinasional.</p>
+                    <p>Komitmen kami adalah menghadirkan teknologi yang mudah digunakan, efisien, dan memberikan nilai tambah yang nyata bagi setiap klien.</p>
+                </div>
+                
+                <div class="product-grid">
+                    <div class="info-card">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-award" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4>Pengalaman 6+ Tahun</h4>
+                        <p>Berpengalaman dalam mengembangkan berbagai jenis aplikasi web, mobile, dan sistem enterprise.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-users" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4>Tim Profesional</h4>
+                        <p>Tim yang terdiri dari 25+ profesional berpengalaman di bidang teknologi dan bisnis development.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <i class="fas fa-rocket" style="font-size: 3rem; color: var(--secondary-color);"></i>
+                        </div>
+                        <h4>Inovasi Berkelanjutan</h4>
+                        <p>Selalu mengikuti perkembangan teknologi terbaru dan best practices dalam setiap project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile" class="content-section">
+                <div class="section-title">Profile Perusahaan</div>
+                <div class="info-card fade-in">
+                    <h3>Sejarah Singkat</h3>
+                    <p>PT Digital Solusi Indonesia didirikan pada tahun 2018 dengan visi menjadi perusahaan teknologi terdepan di Indonesia. Kami memulai perjalanan dengan tim yang kecil namun berdedikasi tinggi untuk menghadirkan solusi digital yang inovatif.</p>
+                    
+                    <p>Perusahaan kami bergerak di bidang pengembangan perangkat lunak, konsultasi IT, dan layanan digital marketing. Dengan pengalaman lebih dari 6 tahun, kami telah melayani berbagai klien dari UMKM hingga perusahaan multinasional.</p>
+                    
+                    <h4>Bidang Keahlian:</h4>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        <li>Website Development</li>
+                        <li>Mobile Application Development</li>
+                        <li>System Integration</li>
+                        <li>Digital Marketing</li>
+                        <li>IT Consulting</li>
+                        <li>Cloud Services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visi Misi Section -->
+            <div id="visi" class="content-section">
+                <div class="section-title">Visi & Misi</div>
+                
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-eye" style="color: var(--accent-color); margin-right: 10px;"></i>Visi</h3>
+                    <p>Menjadi perusahaan teknologi digital terdepan di Indonesia yang mampu menghadirkan solusi inovatif dan berkelanjutan untuk mendukung transformasi digital berbagai industri pada tahun 2030.</p>
+                </div>
+
+                <div class="info-card fade-in">
+                    <h3><i class="fas fa-target" style="color: var(--accent-color); margin-right: 10px;"></i>Misi</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i>Mengembangkan solusi teknologi yang user-friendly dan berkualitas tinggi</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i>Memberikan layanan konsultasi IT yang komprehensif dan terpercaya</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i>Membangun kemitraan strategis dengan klien untuk kesuksesan bersama</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i>Mengembangkan SDM yang kompeten dan berdedikasi tinggi</li>
+                        <li style="padding: 10px 0;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 10px;"></i>Berkontribusi positif dalam ekosistem teknologi Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Produk Section -->
+            <div id="produk" class="content-section">
+                <div class="section-title">Produk & Layanan Kami</div>
+                
+                <div class="product-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: var(--secondary-color);">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>Website Development</h4>
+                            <p>Pembuatan website profesional, responsive, dan SEO-friendly untuk berbagai kebutuhan bisnis.</p>
+                            <ul>
+                                <li>Company Profile</li>
+                                <li>E-Commerce</li>
+                                <li>Landing Page</li>
+                                <li>Web Application</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: var(--accent-color);">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>Mobile App Development</h4>
+                            <p>Pengembangan aplikasi mobile native dan hybrid untuk Android dan iOS.</p>
+                            <ul>
+                                <li>Android Development</li>
+                                <li>iOS Development</li>
+                                <li>Cross-platform App</li>
+                                <li>App Maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: var(--primary-color);">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>System Integration</h4>
+                            <p>Integrasi sistem yang komprehensif untuk meningkatkan efisiensi operasional.</p>
+                            <ul>
+                                <li>ERP System</li>
+                                <li>CRM Integration</li>
+                                <li>API Development</li>
+                                <li>Database Management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: #f39c12;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>Digital Marketing</h4>
+                            <p>Strategi pemasaran digital yang efektif untuk meningkatkan brand awareness.</p>
+                            <ul>
+                                <li>SEO Optimization</li>
+                                <li>Social Media Marketing</li>
+                                <li>Google Ads Management</li>
+                                <li>Content Marketing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: #9b59b6;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>IT Security</h4>
+                            <p>Layanan keamanan IT yang komprehensif untuk melindungi aset digital.</p>
+                            <ul>
+                                <li>Security Assessment</li>
+                                <li>Penetration Testing</li>
+                                <li>Network Security</li>
+                                <li>Data Protection</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-card fade-in">
+                        <div class="product-header" style="background: #1abc9c;">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="product-body">
+                            <h4>Cloud Services</h4>
+                            <p>Solusi cloud computing untuk meningkatkan skalabilitas infrastruktur IT.</p>
+                            <ul>
+                                <li>Cloud Migration</li>
+                                <li>Cloud Storage</li>
+                                <li>Server Management</li>
+                                <li>Backup Solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kontak Section -->
+            <div id="kontak" class="content-section">
+                <div class="section-title">Kontak Kami</div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h3>Informasi Kontak</h3>
+                            <div style="margin-bottom: 20px;">
+                                <h5><i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 10px;"></i>Alamat</h5>
+                                <p>Jl. Teknologi Digital No. 123<br>
+                                Jakarta Selatan, DKI Jakarta 12345<br>
+                                Indonesia</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5><i class="fas fa-phone" style="color: var(--accent-color); margin-right: 10px;"></i>Telepon</h5>
+                                <p>+62 21 1234-5678<br>
+                                +62 812-3456-7890</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5><i class="fas fa-fax" style="color: var(--accent-color); margin-right: 10px;"></i>Fax</h5>
+                                <p>+62 21 1234-5679</p>
+                            </div>
+                            
+                            <div>
+                                <h5><i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 10px;"></i>Email</h5>
+                                <p>info@digitalsolusi.co.id<br>
+                                marketing@digitalsolusi.co.id</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="contact-form">
+                            <h3>Kirim Pesan</h3>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Nomor Telepon">
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-control" required>
+                                        <option value="">Pilih Layanan</option>
+                                        <option value="website">Website Development</option>
+                                        <option value="mobile">Mobile App Development</option>
+                                        <option value="system">System Integration</option>
+                                        <option value="marketing">Digital Marketing</option>
+                                        <option value="security">IT Security</option>
+                                        <option value="cloud">Cloud Services</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Pesan Anda" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Us Section -->
+            <div id="about" class="content-section">
+                <div class="section-title">About Us</div>
+                <div class="info-card fade-in">
+                    <h3>Tentang PT Digital Solusi Indonesia</h3>
+                    <p>PT Digital Solusi Indonesia adalah perusahaan yang berfokus pada pengembangan solusi teknologi informasi dan digital marketing. Kami berkomitmen untuk membantu klien mencapai kesuksesan melalui implementasi teknologi yang tepat dan strategi digital yang efektif.</p>
+                    
+                    <h4>Mengapa Memilih Kami?</h4>
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-3">
+                            <div style="text-align: center; padding: 20px; background: var(--light-bg); border-radius: 10px;">
+                                <i class="fas fa-quality" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 15px;">
